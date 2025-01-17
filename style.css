@@ -1,0 +1,372 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff; /* Warna latar belakang pastel */
+}
+
+/*navbar start*/
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 2rem;
+    background-color: #8469b6; /* Warna latar navbar */
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 40px; /* Ukuran logo */
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem; /* Jarak antar-tautan */
+}
+
+.nav-links a {
+    color: #64ffda; /* Warna hijau terang */
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Jarak antara angka dan teks */
+    position: relative; /* Menambahkan posisi relatif untuk garis bawah */
+    overflow: hidden; /* Menghindari garis keluar dari batas */
+    padding-bottom: 2px;
+}
+
+.nav-links a::before {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%; /* Dimulai dengan lebar 0% */
+    height: 2px;
+    background-color: #ffffff; /* Garis bawah putih */
+    transition: all 0.3s ease;
+    transform: translateX(-50%); /* Memastikan garis dimulai dari tengah */
+}
+
+.nav-links a:hover {
+    color: #ffffff; /* Warna putih saat hover */
+}
+
+.nav-links a:hover::before {
+    width: 80%; /* Memperluas garis ke samping saat hover */
+}
+
+.nav-links span {
+    color: #64ffda; /* Warna hijau terang untuk angka */
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.resume-button {
+    color: #64ffda;
+    border: 1px solid #64ffda;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #64ffda; /* Warna hijau terang untuk latar belakang */
+    color: #0a192f; /* Warna teks menjadi gelap */
+}
+
+/*navbar end*/
+
+/*header start*/
+
+header {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #CB80AB;
+    color: #fff;
+    text-align: center;
+    height: 100vh; /* Menyesuaikan ukuran header dengan tinggi layar pengguna */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic {
+    z-index: 999;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    object-fit: cover;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk foto profil */
+}
+
+header h1, header p {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Efek bayangan pada teks */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-top: 0.5em;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6); /* Memberikan efek gelap pada latar belakang */
+    z-index: 0;
+}
+
+/*header end*/
+
+/*About start*/
+section#about {
+    background-color: #F9F3DF; /* Warna pastel untuk latar belakang */
+    color: #4A4A4A; /* Warna teks yang lembut */
+    padding: 40px 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out, funBounce 1.5s ease-out;
+}
+
+section#about h2 {
+    font-size: 2em;
+    color: #FFB6B9; /* Warna pastel untuk judul */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section#about p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #6B705C; /* Warna teks yang lembut dan nyaman dibaca */
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+/* Add subtle hover effect to emphasize section */
+section#about:hover {
+    background-color: #FFF6EA; /* Sedikit lebih terang saat di-hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Add animation for the section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fun animation for when the website is loaded */
+@keyframes funBounce {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/*About end*/
+
+/* project */
+#projects {
+    background-color: #fef6e4; /* Warna pastel lembut */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-width: 800px; /* Batas lebar maksimal */
+    margin: 20px auto; /* Pusatkan bagian ini */
+}
+
+#projects h2 {
+    color: #ff8ba7; /* Warna pastel pink */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#projects p {
+    color: #6a7ba2; /* Warna pastel biru keabu-abuan */
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#projects ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#projects ul li {
+    background-color: #a2d2ff; /* Warna pastel biru muda */
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #5f6f94; /* Warna abu pastel */
+    font-size: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#projects ul li:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#projects ul li:nth-child(odd) {
+    background-color: #cdb4db; /* Warna pastel ungu */
+}
+
+#projects ul li:nth-child(even) {
+    background-color: #bde0fe; /* Warna pastel biru muda lainnya */
+}
+
+
+/* project end*/   
+
+/* contact */
+#contact {
+    background-color: #eaf4f4; /* Warna pastel hijau lembut */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #8eecf5; /* Warna pastel biru muda */
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    color: #4a7c59; /* Warna pastel hijau gelap */
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contact ul li {
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: #fef6e4; /* Warna pastel krem lembut */
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+#contact ul li:hover {
+    transform: scale(1.05);
+    background-color: #ffebee; /* Warna pastel pink lembut */
+}
+
+#contact ul li a {
+    color: #ff8ba7; /* Warna pastel pink */
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s;
+}
+
+#contact ul li a:hover {
+    color: #ff6b6b; /* Warna pastel pink lebih gelap */
+}
+
+
+/* contact end */
+
+/* footer */
+
+footer {
+    background-color: #fef6e4; /* Warna pastel krem lembut */
+    padding: 15px 20px;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer p {
+    color: #6a7ba2; /* Warna pastel biru keabu-abuan */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+footer p::before {
+    content: "✨";
+    margin-right: 5px;
+    font-size: 1rem;
+    color: #ff8ba7; /* Warna pastel pink */
+}
+
+footer p::after {
+    content: "✨";
+    margin-left: 5px;
+    font-size: 1rem;
+    color: #ff8ba7; /* Warna pastel pink */
+}
+
+footer:hover {
+    background-color: #ffebee; /* Warna pastel pink sangat lembut */
+    transition: background-color 0.3s;
+}
+
+/* footer */

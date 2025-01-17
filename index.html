@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icon-->
+    <link rel="icon" href="./img/logo.png" type="image/x-icon">
+    <!--icon end-->
+    <link rel="stylesheet" href="style.css">
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    <!--Font end-->
+    <title>Portfolio</title>
+</head>
+<body>
+
+<!--navbar -->
+    <nav>
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo">
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+    <!--navbar end -->
+    
+   <!--header --> 
+    <header>
+        <img src="./img/muti.JPG" alt="Profile Picture" class="profile-pic"> <!-- Ganti dengan URL foto profil kamu -->
+        <h1>Muftihatul Rahma</h1>
+        <p>Web Developer & Desainer Grafis</p>
+    </header>
+    <!--header end -->
+
+    <!--about -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah Muftihatul Rahma, mahasiswi Informatika semester 6 berusia 20 tahun yang memiliki semangat besar dalam dunia pengembangan web dan desain grafis. Saya tertarik menggabungkan logika pemrograman dengan estetika visual untuk menciptakan pengalaman digital yang menarik dan fungsional. Dengan keterampilan di bidang HTML, CSS, JavaScript, serta alat desain seperti Figma dan Photoshop, saya terus mengasah kemampuan melalui proyek-proyek akademik, hackathon, dan kolaborasi tim. Di luar teknologi, saya juga mencintai seni digital dan menulis, menjadikan kreativitas sebagai nilai tambah dalam setiap karya saya. Saya percaya belajar dan berkolaborasi adalah kunci untuk menciptakan inovasi yang luar biasa.</p>
+    </section>
+    <!--about end -->
+
+    <!--projects -->
+    <section id="projects">
+        <h2>Proyek</h2>
+        <p>Berikut adalah beberapa proyek yang pernah saya kerjakan:</p>
+        <ul>
+            <li>Proyek 1: Deskripsi proyek 1</li>
+            <li>Proyek 2: Deskripsi proyek 2</li>
+            <li>Proyek 3: Deskripsi proyek 3</li>
+        </ul>
+    </section>
+    <!--projects end -->
+
+    <!--contact -->
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Hubungi saya melalui:</p>
+        <ul>
+            <li>
+                <a href="mailto:muftihatulrahma12@email.com" target="_blank">
+                    📧 Email: muftihatulrahma12@email.com
+                </a>
+            </li>
+            <li>
+                <a href="https://instagram.com/muttihtlrhm_" target="_blank">
+                    📸 Instagram: @muttihtlrhm_
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/082297378579" target="_blank">
+                    📱 WhatsApp: +62 82297378579
+                </a>
+            </li>
+        </ul>
+    </section>
+    
+    <!--contact end -->
+
+    <!--footer-->
+    <footer>
+        <p>&copy; 2025 Muti. Semua Hak Dilindungi.</p>
+    </footer>
+    <!--footer end -->
+</body>
+<script>
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('nav');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY) {
+        navbar.classList.add('hidden');
+    } else {
+        navbar.classList.remove('hidden');
+    }
+    lastScrollY = window.scrollY;
+});
+</script>
+</html>
